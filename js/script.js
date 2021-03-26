@@ -18,7 +18,7 @@ const renderEC = () => {
       
           console.log(conteudoJson);
 
-                return fetch('http://paypal-checkout-api-v2.herokuapp.com/my-api/create-payment/', {
+                return fetch('https://paypal-checkout-api-v2.herokuapp.com/my-api/create-payment/', {
                   method: 'post',
                   credentials: "include",
                   body: JSON.stringify(conteudoJson),
@@ -39,7 +39,7 @@ const renderEC = () => {
         onApprove: function (data) {
                 console.log(data);
 
-                return fetch('http://paypal-checkout-api-v2.herokuapp.com/my-api/execute-payment/', {
+                return fetch('https://paypal-checkout-api-v2.herokuapp.com/my-api/execute-payment/', {
                   method: 'post',
                   credentials: "include",
                   body: JSON.stringify({
